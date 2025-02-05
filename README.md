@@ -1,5 +1,5 @@
 # e-commerce
-xây dựng một ứng dụng e-commerce microservices theo kiến trúc mẫu từ Microsoft. Kiến trúc này gồm nhiều client khác nhau giao tiếp với backend thông qua API Gateway. Mỗi microservice có phong cách kiến trúc và cơ sở dữ liệu riêng, sử dụng cả giao tiếp đồng bộ (synchronous) và bất đồng bộ (asynchronous) qua event bus.
+Xây dựng một ứng dụng e-commerce microservices theo kiến trúc mẫu từ Microsoft. Kiến trúc này gồm nhiều client khác nhau giao tiếp với backend thông qua API Gateway. Mỗi microservice có phong cách kiến trúc và cơ sở dữ liệu riêng, sử dụng cả giao tiếp đồng bộ (synchronous) và bất đồng bộ (asynchronous) qua event bus.
 
 Chúng ta sẽ từng bước xây dựng một ứng dụng thương mại điện tử (e-commerce) với các microservices như:
 
