@@ -50,7 +50,7 @@ Giới thiệu về từng microservice
         Sử dụng các tính năng như model binding, validations, view components.
         Chạy trên Docker.
 
-Các công nghệ và kỹ thuật quan trọng trong khóa học
+Các công nghệ và kỹ thuật quan trọng
 
     Triển khai microservices với .NET 8.
     Domain-Driven Design (DDD), Vertical Slice Architecture, Clean Architecture.
