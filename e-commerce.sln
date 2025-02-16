@@ -1,10 +1,39 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D0915755-B61A-4C41-89B6-5021DB92DD58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F4B97F28-13E6-4690-8433-1FE2C1BD6E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Catalog.API\Catalog.API.csproj", "{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{AF76AD09-9CB5-4F6F-9CC9-87E2D4BE8D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks.csproj", "{766256FE-785F-4EAA-91F7-B4E553F8A054}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766256FE-785F-4EAA-91F7-B4E553F8A054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766256FE-785F-4EAA-91F7-B4E553F8A054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766256FE-785F-4EAA-91F7-B4E553F8A054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766256FE-785F-4EAA-91F7-B4E553F8A054}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4B97F28-13E6-4690-8433-1FE2C1BD6E48} = {D0915755-B61A-4C41-89B6-5021DB92DD58}
+		{3BBE7951-676F-4AA6-9C44-BCCE4C1DF6E4} = {F4B97F28-13E6-4690-8433-1FE2C1BD6E48}
+		{766256FE-785F-4EAA-91F7-B4E553F8A054} = {AF76AD09-9CB5-4F6F-9CC9-87E2D4BE8D70}
 	EndGlobalSection
 EndGlobal
