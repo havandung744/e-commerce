@@ -23,16 +23,16 @@ namespace Catalog.API.Products.CreateProduct
 
     public class CreateProductCommandHandler(IDocumentSession session) : ICommandhandler<CreateProductCommand, CreateProductResult>
     {
-        public async Task<CreateProductResult> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
             //create Product entity from command object
             var product = new Product
             {
-                Name = request.Name,
-                Category = request.Category,
-                Description = request.Description,
-                ImageFile = request.ImageFile,
-                Price = request.Price
+                Name = command.Name,
+                Category = command.Category,
+                Description = command.Description,
+                ImageFile = command.ImageFile,
+                Price = command.Price
             };
 
             //save to database
