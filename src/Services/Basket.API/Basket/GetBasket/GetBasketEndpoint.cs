@@ -1,13 +1,8 @@
-﻿using Carter;
-using Mapster;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Basket.API.Basket.GetBasket
+﻿namespace Basket.API.Basket.GetBasket
 {
     public record GetBasketResponse(ShoppingCart shoppingCart);
 
-    public class GetBasketEndpoints : ICarterModule
+    public class GetBasketEndpoint : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
