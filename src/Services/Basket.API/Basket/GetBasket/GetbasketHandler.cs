@@ -3,11 +3,13 @@
     public record GetbasketQuery(string UserName) : IQuery<GetbasketResult>;
     public record GetbasketResult(ShoppingCart ShoppingCart);
 
-    public class GetbasketHandler : IQueryHandler<GetbasketQuery, GetbasketResult>
+    public class GetbasketHandler(IBasketRepository repository) : IQueryHandler<GetbasketQuery, GetbasketResult>
     {
-        public async Task<GetbasketResult> Handle(GetbasketQuery request, CancellationToken cancellationToken)
+        public async Task<GetbasketResult> Handle(GetbasketQuery query, CancellationToken cancellationToken)
         {
-            return new GetbasketResult(new ShoppingCart("Dung Ha"));
+            var basket = await repository.GetBasket(query.UserName);
+
+            return new GetbasketResult(basket);
         }
     }
 }
