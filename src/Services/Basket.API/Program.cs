@@ -27,13 +27,18 @@ builder.Services.AddMarten(opts =>
     opts.Schema.For<ShoppingCart>().Identity(x => x.UserName);
 }).UseLightweightSessions();
 
-//builder.Services.AddScoped<IBasketRepository, CachedBasketRepository>();
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 builder.Services.Decorate<IBasketRepository, CachedBasketRepository>();
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis")!;
+});
+
+// Add grpc client for discount service
+builder.Services.AddGrpcClient<Discount.GRPC.Protos.DiscountProtoService.DiscountProtoServiceClient>(options =>
+{
+    options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
 });
 
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
