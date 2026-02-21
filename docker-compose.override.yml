@@ -6,7 +6,7 @@ services:
        - POSTGRES_DB=CatalogDb
      restart: always
      ports:
-       - "15432:5432"
+       - "5435:5432"
      volumes:
        - postgres_catalog:/var/lib/postgresql
 
@@ -17,7 +17,7 @@ services:
        - POSTGRES_DB=BasketDb
      restart: always
      ports:
-       - "5432:5432"
+       - "5434:5432"
      volumes:
        - postgres_basket:/var/lib/postgresql
 
@@ -51,7 +51,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ConnectionStrings__Database=Server=basketdb;Port=5432;Database=BasketDb;User Id=postgres;Password=123456;Include Error Detail=true
       - ConnectionStrings__Redis=distributedcache:6379
-      - GrpcSettings__DiscountUrl=https://discountgrpc:8081
+      - GrpcSettings__DiscountUrl=https://discount.grpc:8081
     depends_on:
       - basketdb
       - distributedcache
