@@ -29,7 +29,6 @@ namespace Ordering.Infrastructure.Data.Extensions
             {
                 await context.Customers.AddRangeAsync(InitialData.Customers);
                 await context.SaveChangesAsync();
-                await SeedOrderAndItemsAsync(context);
             }
         }
 
