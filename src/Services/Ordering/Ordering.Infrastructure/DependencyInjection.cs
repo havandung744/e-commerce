@@ -1,9 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Ordering.Infrastructure.Data;
-using Ordering.Infrastructure.Data.Interceptors;
-
-namespace Ordering.Infrastructure
+﻿namespace Ordering.Infrastructure
 {
     public static class DependencyInjection
     {
@@ -11,9 +6,13 @@ namespace Ordering.Infrastructure
         {
             var connectionString = configuration.GetConnectionString("DatabaseConnection");
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            // Add services to the container.
+            services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
+            services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
+
+            services.AddDbContext<ApplicationDbContext>((sp, options) =>
             {
-                options.AddInterceptors(new AuditableEntityInterceptor());
+                options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
                 options.UseSqlServer(connectionString);
             });
 
