@@ -3,7 +3,7 @@ using Ordering.Domain.Models;
 
 namespace Ordering.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -24,7 +24,7 @@ namespace Ordering.Infrastructure.Data
             //    entity.OwnsOne(e => e.ShippingAddress);
             //    entity.OwnsOne(e => e.BillingAddress);
             //    entity.OwnsOne(e => e.Payment);
-            //});
+            //});/**/
             //modelBuilder.Entity<OrderItem>(entity =>
             //{
             //    entity.HasKey(e => e.Id);

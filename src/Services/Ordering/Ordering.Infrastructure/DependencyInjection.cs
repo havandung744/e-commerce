@@ -16,6 +16,8 @@
                 options.UseSqlServer(connectionString);
             });
 
+            services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+
             return services;
         }
     }
