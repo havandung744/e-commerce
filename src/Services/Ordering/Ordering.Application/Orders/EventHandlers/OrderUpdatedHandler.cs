@@ -5,7 +5,7 @@
         public Task Handle(OrderUpdatedEvent notification, CancellationToken cancellationToken)
         {
             logger.LogInformation("Order with ID {OrderId} has been updated.", notification.GetType().Name);
-            return
+            return Task.CompletedTask;
         }
     }
 }
