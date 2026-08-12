@@ -2,7 +2,7 @@
 {
     public record DeleteOrderResponse(bool IsSuccess);
 
-    public class DeleteOrder
+    public class DeleteOrder : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {

@@ -1,6 +1,4 @@
-﻿using BuildingBlocks.Behaviors;
-
-namespace Ordering.Application
+﻿namespace Ordering.Application
 {
     public static class DependencyInjection
     {
@@ -12,6 +10,8 @@ namespace Ordering.Application
                 cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
                 cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
+
+            services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
             return services;
         }

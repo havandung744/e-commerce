@@ -14,3 +14,4 @@ global using Ordering.Domain.Models;
 global using Ordering.Domain.ValueObjects;
 global using Ordering.Application.Extensions;
 global using BuildingBlocks.Pagination;
+global using BuildingBlocks.Behaviors;
