@@ -13,3 +13,6 @@ global using Ordering.Application.Orders.Queries.GetOrdersByName;
 global using Ordering.Application.Orders.Queries.GetOrdersByCustomer;
 global using BuildingBlocks.Pagination;
 global using Ordering.Application.Orders.Queries.GetOrders;
+global using BuildingBlocks.Exceptions.Handler;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
