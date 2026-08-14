@@ -15,3 +15,7 @@ global using Ordering.Domain.ValueObjects;
 global using Ordering.Application.Extensions;
 global using BuildingBlocks.Pagination;
 global using BuildingBlocks.Behaviors;
+global using BuildingBlocks.Messaging.Events;
+global using MassTransit;
+global using Ordering.Application.Orders.Commands.CreateOrder;
+global using Microsoft.FeatureManagement;
