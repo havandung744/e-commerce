@@ -32,7 +32,7 @@ namespace Ordering.Domain.Models
                 Status = OrderStatus.Pending
             };
 
-            order.AddDomainEvent(new OrderCreatedEvent(order));
+            order.AddDomainEvent(new OrderCreatedEvent(order)); 
 
             return order;
         }
@@ -55,7 +55,7 @@ namespace Ordering.Domain.Models
 
             var orderItem = new OrderItem(Id, productId, quantity, price);
             _orderItems.Add(orderItem);
-        }
+        } 
 
         public void Remove(ProductId productId)
         {

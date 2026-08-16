@@ -11,6 +11,8 @@
                 cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
 
+            services.AddFeatureManagement();
+            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
             return services;
